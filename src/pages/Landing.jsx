@@ -1,5 +1,5 @@
 // import logo from '../assets/images/logo.svg'
-// import main from '../assets/images/main.svg'
+import main from '../assets/images/main.svg'
 const Landing = () => {
   return (
     <main>
@@ -13,6 +13,7 @@ const Landing = () => {
           <p>A place where I can keep track of all the jobs I have applied to.</p>
           <button className="btn btn-hero">Login or Register</button>
         </div>
+        <img src={main} alt="job hunt" className='img main-img' />
       </div>
     </main>
   )
