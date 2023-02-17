@@ -1,9 +1,10 @@
 import Landing from "./pages/Landing";
+import styled from "styled-components";
 
-function App() {
+
+const App = () => {
   return (
     <div className="App">
-      <h1>Job Tracker</h1>
       <Landing />
     </div>
   );
