@@ -1,8 +1,6 @@
-import Landing from "./pages/Landing";
-import Dashboard from "./pages/Dashboard";
-import Error from "./pages/Error";
-import Register from "./pages/Register"
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom"
+import {Register, Landing, Error, Dashboard} from "./pages";
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+
 const App = () => {
   return (
     <div className="App">
