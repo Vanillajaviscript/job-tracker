@@ -1,10 +1,62 @@
+import {useState, useEffect} from "react";
+import {Logo} from "../components";
+import Wrapper from "../assets/wrappers/RegisterPage";
 
+const initialState = {
+  name: "",
+  email: "",
+  password:"",
+  isMember: true,
+}
 
 const Register = () => {
+  const [values, setValues] = useState(initialState)
+
+  const handleChange = (e) => {
+    console.log(e.target)
+  }
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+  }  
   return (
-    <div>
-      <h2>Register page works</h2>
-    </div>
+    <Wrapper className="full-page">
+      <form className="form" onSubmit={onSubmit}>
+        <Logo/>
+        <h3>Login</h3>
+        <div className="form-row">
+          <label htmlFor="name" className="form-label">
+            name
+          </label>
+          <input 
+            type="text" 
+            value={values.name} 
+            name="name" 
+            onChange={handleChange} 
+            className="form-input"
+          />
+          <input 
+            type="email" 
+            value={values.email} 
+            name="email" 
+            onChange={handleChange} 
+            className="form-input" 
+          />
+          <input 
+            type="password" 
+            value={values.password} 
+            name="password" 
+            onChange={handleChange} 
+            className="form-input" 
+          />
+        </div>
+        <button 
+          type="submit" 
+          className="btn btn-block">
+          Submit
+        </button>
+      </form>
+    </Wrapper>
   )
 };
 
